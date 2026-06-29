@@ -3,6 +3,7 @@ import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 import TurndownService from 'turndown';
 import { FloatingToolbar } from './FloatingToolbar';
+import { TableToolbar } from './TableToolbar';
 import { replaceWikiLinks } from '../utils/noteUtils';
 import './Editor.css';
 
@@ -129,6 +130,7 @@ export const Editor: React.FC<EditorProps> = ({
   return (
     <div className="editor-container">
       <FloatingToolbar editorRef={editorRef as React.RefObject<HTMLDivElement>} />
+      <TableToolbar editorRef={editorRef as React.RefObject<HTMLDivElement>} />
 
       {/* WYSIWYG contenteditable area */}
       <div

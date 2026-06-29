@@ -52,3 +52,61 @@
 .ft-btn + .ft-btn {
   border-left: none;
 }
+
+/* ─── Grid picker dropdown ─── */
+
+.grid-picker-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-panel);
+  border: 1px solid var(--border-highlight);
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  z-index: 501;
+  animation: grid-picker-appear 0.1s ease;
+}
+
+@keyframes grid-picker-appear {
+  from { opacity: 0; transform: translateX(-50%) translateY(3px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.grid-picker-label {
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.grid-picker-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.grid-picker-row {
+  display: flex;
+  gap: 2px;
+}
+
+.grid-picker-cell {
+  width: 16px;
+  height: 16px;
+  background: var(--border-color);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.08s;
+}
+
+.grid-picker-cell:hover {
+  background: var(--primary-accent);
+}
+
+.grid-picker-cell--active {
+  background: var(--primary-accent);
+  opacity: 0.5;
+}
