@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs wc -l)",
+      "Bash(npm install *)",
+      "Bash(npm test *)",
+      "Bash(npm run *)",
+      "Skill(run)",
+      "Bash(node -e ' *)",
+      "Bash(where chromium *)",
+      "Bash(where playwright *)",
+      "Bash(npx playwright *)",
+      "Bash(node -e \"require\\('playwright'\\); console.log\\('ok'\\)\")"
+    ]
+  }
+}

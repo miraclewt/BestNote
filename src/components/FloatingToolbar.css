@@ -1,0 +1,54 @@
+.floating-toolbar {
+  position: fixed;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-highlight);
+  border-radius: 6px;
+  padding: 4px 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  z-index: 500;
+  animation: ft-appear 0.12s ease;
+}
+
+@keyframes ft-appear {
+  from { opacity: 0; transform: translateX(-50%) translateY(4px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.ft-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 12px;
+  padding: 3px 7px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+  font-family: var(--font-sans);
+  line-height: 1.4;
+}
+
+.ft-btn:hover {
+  background: rgba(122, 162, 247, 0.12);
+  color: var(--text-primary);
+}
+
+.ft-btn--wiki {
+  font-size: 11px;
+  color: var(--primary-accent);
+  opacity: 0.8;
+}
+
+.ft-btn--wiki:hover {
+  opacity: 1;
+}
+
+/* Separator between groups */
+.ft-btn + .ft-btn {
+  border-left: none;
+}
